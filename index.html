@@ -1,0 +1,73 @@
+<!--
+추천검색어
+html new line tag: <br/> -> 단순 줄바꿈
+html paragraph(단락) tag: <p></p>
+사용설명서 검색:html specification
+<p style="margin-top:45px;"><h1>HTML</h1> <p/></style>
+-->
+
+<!--
+<img src="image/coding-image.jpg" width="100%">
+[src]와 [width]를 속성, Attribute
+-->
+
+<!--
+<ol></ol> Ordered List
+          The <ol> tag defines an ordered list. An ordered list can be numerical or alphabetical.
+          Use the <li> tag to define list items.
+<ul></ul> Unordered List
+          The <ul> tag defines an unordered (bulleted) list.
+          Use the <ul> tag together with the <li> tag to create unordered lists.
+<li></li> List item
+-->
+
+<!--
+원하는 위치에 동시에 같은 글이나 태그를 입력하고 싶을때!!!!!!!!
+
+Ctrl을 누른채로 원하는 위치에서 클릭하면 다중선택이 된다.
+선택된 상태에서 입력하면 동시다발적으로 입력이 됨
+-->
+<!DOCTYPE html> <!-- 이페지는 html이다는 것을 정의-->
+<html>
+  <head>
+    <meta charset="utf-8"> <!-- 페이지를 열때 utf-8로 열어라-->
+    <title>html basic</title>
+  </head>
+
+  <body>
+    <h1><a href="index.html">WEB HOME</a></h1>
+    <ul>
+      <li><a href="html-cap.html ">HTML</a></li>
+      <li><a href="css-cap.html">CSS</a></li>
+      <li><a href="js-cap.html">Javascript</a></li>
+    </ul><p></p>
+    <!--
+        <a href="https://www.w3.org/TR/2011/WD-html5-20110405/" target="_top" title="W3C html5 reference Draft"></a>
+        href: h: Hypertext ref: Reference
+        _blank :  새 윈도우 창을 열어서, 웹페이지를 엽니다. 기존의 창은 그대로 남겨져 있스빈다.
+        _self :   현재 윈도우창에 그대로, 링크된 웹페이지를 엽니다. ( 현재의 프레임 )
+        _parent : 현재 프레임의 부모 프레임에서 새웹페이지가 열립니다.
+                  만약 어떤 창 A에서 창 B를 새로 열었습니다. 그런데 창 B에서 _parent로 창을 열면 창 A에서 열리게 되는 것이죠.
+        _top : 최상위 프레임에서 열립니다. _parent와 비슷한데요. _parent는 바로 이전창(부모창)에서 열리는 반면
+               _top은 최상위(가장 최고 부모)창에서 열립니다.
+        title : 링크에 마우스 올렸을때 나타나는 참조 글
+    -->
+    <p style="margin-top:45;"><h3>WEB</h3>
+    <a href="https://www.w3.org/TR/2011/WD-html5-20110405/" target="_blank" title="W3C html5 reference Draft"><strong>Hypertext Markup Language <u>(HTML)</u></strong></a>
+    is the standard markup language for documents designed to be displayed in a web browser.
+    It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.
+    Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages.
+    HTML describes the structure of a web page semantically and originally included cues for the appearance of the document.
+    <br><br>
+    HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects such as interactive forms may be
+    embedded into the rendered page. HTML provides a means to create structured documents by denoting structural semantics for text
+    such as headings, paragraphs, lists, links, quotes and other items. HTML elements are delineated by tags, written using angle brackets. <p></p>
+    <p><img src="image/coding-image.jpg" width="100%"></p> <!-- 100%: 브라우저 크기에 맞게 자동으로 확대 축소-->
+    Tags such as <img> and <input> directly introduce content into the page. Other tags such as surround and provide information about
+    document text and may include other tags as sub-elements. Browsers do not display the HTML tags, but use them to interpret the content of the page.
+    HTML can embed programs written in a scripting language such as JavaScript, which affects the behavior and content of web pages.
+    Inclusion of CSS defines the look and layout of content. The World Wide Web Consortium (W3C), former maintainer of the HTML and current maintainer
+    of the CSS standards, has encouraged the use of CSS over explicit presentational HTML since 1997.[2]
+
+  </body>
+</html>
