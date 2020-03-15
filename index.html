@@ -32,15 +32,29 @@ Ctrl을 누른채로 원하는 위치에서 클릭하면 다중선택이 된다.
   <head>
     <meta charset="utf-8"> <!-- 페이지를 열때 utf-8로 열어라-->
     <title>html basic</title>
+    <style>
+      a {
+        color:#50C2FF;
+        font-family: 서울남산 장체 B, NanumGothic;
+        font-size: 24px
+      }
+    </style>
   </head>
 
   <body>
     <h1><a href="index.html">WEB HOME</a></h1>
     <ul>
-      <li><a href="html-cap.html ">HTML</a></li>
+      <li><a href="html-cap.html">HTML</a></li>
       <li><a href="css-cap.html">CSS</a></li>
       <li><a href="js-cap.html">Javascript</a></li>
     </ul><p></p>
+
+    <!-- <h1><a href="index.html">WEB HOME</a></h1>
+    <ul>
+      <li><a href="html-cap.html ">HTML</a></li>
+      <li><a href="css-cap.html">CSS</a></li>
+      <li><a href="js-cap.html">Javascript</a></li>
+    </ul><p></p> -->
     <!--
         <a href="https://www.w3.org/TR/2011/WD-html5-20110405/" target="_top" title="W3C html5 reference Draft"></a>
         href: h: Hypertext ref: Reference
@@ -52,6 +66,40 @@ Ctrl을 누른채로 원하는 위치에서 클릭하면 다중선택이 된다.
                _top은 최상위(가장 최고 부모)창에서 열립니다.
         title : 링크에 마우스 올렸을때 나타나는 참조 글
     -->
+    <p>
+      <!--
+          <iframe> tag
+          추천검색어: iframe Attribute
+
+          inline Frame의 약자
+          현재 HTML 문서에 다른 문서(다른 html페이지, 동영상 등)를 포함시킬 때 사용
+          HTML5 이전에도 이후에도 iframe을 사용하지 않는 것을 권고
+          -반응형 웹 사이트가 대세인 오늘날의 트렌드와 상극
+          -페이지의 파편화 문제 발생
+           (검색 엔진 등록 시 frameset 뿐만 아니라 메뉴용 페이지, 콘텐츠용 페이지 까지 함께 크롤링 할 수 있다.)
+          -웹접근성 저해의 요인이 될 수 있음으로 남용에 주의
+          -프레임 구조가 가지고 있던 장점을 CSS와 jQuery로 해결 가능
+          *속성
+          width:
+          height:
+          src:
+          srcdoc:
+          frameborder:
+          allow:Specifies a feature policy for the <iframe>. See the article Privacy, permissions,
+                 and information security for details on security issues and how <iframe> works
+                 with Feature Policy to keep systems safe.
+                 -accelerometer:
+                 -autoplay:
+                 -encrypted-media:
+                 -gyroscope:
+                 -picture-in-picture
+          allowfullscreen: Set to true if the <iframe> can activate fullscreen mode by calling the requestFullscreen() method.
+          allowpaymentrequest: Set to true if a cross-origin <iframe> should be allowed to invoke the Payment Request API.
+
+      -->
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/7T7r_oSp0SE" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </p>
     <p style="margin-top:45;"><h3>WEB</h3>
     <a href="https://www.w3.org/TR/2011/WD-html5-20110405/" target="_blank" title="W3C html5 reference Draft"><strong>Hypertext Markup Language <u>(HTML)</u></strong></a>
     is the standard markup language for documents designed to be displayed in a web browser.
