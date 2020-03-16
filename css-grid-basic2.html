@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>css grid basic2</title>
+    <style>
+      div {
+        border: 2px solid #aaa;
+      }
+      #grid1{
+        border: 2px solid #5aa2ff;
+        display: grid;  /* 이 효과만으로는 아무런 변화가 없다 그냥 골격 효과로 보면 됨 아래에 상세 효과를 표기해야함  */
+
+        /* grid-template-columns: 가로로 나란히 놓을 때
+          첫번째 값은 첫번째 콘텐트 영역의 값, 두번째 값은 두번째 콘텐트 영역의 값이다. 즉 차례대로 값을 준 것
+          150px: 고정되는 가로영역 즉 브라우저를 줄이면 저 사이즈이하로 줄어들지 않음 1fr: 150px이외의 가로 전체 영역을 다 차지 하겠다는 의미
+        */
+        grid-template-columns: 150px 1fr;
+      }
+
+      #grid2{
+        border: 2px solid #5aa2ff;
+        display: grid;
+        /* 가로화면을 3등분 한 것이며 첫번째가 2/3영역을 차지하고 두번째가 1/3영역을 차지 */
+        grid-template-columns: 2fr 1fr;
+      }
+
+      #grid3{
+        border: 2px solid #5aa2ff;
+        display: grid;
+        /* 가로화면을 5등분 한 것이며  첫번째가 1/5영역을 차지하고 두번째가 4/5영역을 차지 */
+        grid-template-columns: 1fr 4fr;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="grid1"> <!-- 아래 <div> tag를 감싸는 부모 tag -->
+      <div>
+        Navigation
+      </div>
+
+      <div>
+        <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets" target="_blank" title="CSS define"><strong>Cascading Style Sheets <u>(CSS)</u></strong></a>
+        is a style sheet language used for describing the presentation of a document written in a markup language like HTML.
+        CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.[2]
+        CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts.[3]
+        This separation can improve content accessibility, provide more flexibility and control in the specification of
+        presentation characteristics, enable multiple web pages to share formatting by specifying the relevant CSS in a separate
+        .css file, and reduce complexity and repetition in the structural content.
+      </div>
+    </div>
+    <p></p>
+
+    <div id="grid2"> <!-- 아래 <div> tag를 감싸는 부모 tag -->
+      <div>
+        Navigation
+      </div>
+
+      <div>
+        <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets" target="_blank" title="CSS define"><strong>Cascading Style Sheets <u>(CSS)</u></strong></a>
+        is a style sheet language used for describing the presentation of a document written in a markup language like HTML.
+        CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.[2]
+        CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts.[3]
+        This separation can improve content accessibility, provide more flexibility and control in the specification of
+        presentation characteristics, enable multiple web pages to share formatting by specifying the relevant CSS in a separate
+        .css file, and reduce complexity and repetition in the structural content.
+      </div>
+    </div>
+
+    <p></p>
+
+    <div id="grid3"> <!-- 아래 <div> tag를 감싸는 부모 tag -->
+      <div>
+        Navigation
+      </div>
+
+      <div>
+        <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets" target="_blank" title="CSS define"><strong>Cascading Style Sheets <u>(CSS)</u></strong></a>
+        is a style sheet language used for describing the presentation of a document written in a markup language like HTML.
+        CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.[2]
+        CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts.[3]
+        This separation can improve content accessibility, provide more flexibility and control in the specification of
+        presentation characteristics, enable multiple web pages to share formatting by specifying the relevant CSS in a separate
+        .css file, and reduce complexity and repetition in the structural content.
+      </div>
+    </div>
+
+  </body>
+</html>

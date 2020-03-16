@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CSS-grid-basic4</title>
+    <style>
+    body {
+        margin: 0px;   /* <body>태그는 기본으로 margin값을 가지고 있어서 지정해주지 않으면 브라우저에서 떨어져서 선이 나옴 */
+    }
+
+    a {
+      color: black;
+      text-decoration: none;
+    }
+
+    h1{
+      background-color: #eee;
+      font-size: 30px;
+      text-decoration: none;
+      text-align: center;
+      border-bottom: 1px solid #aaa;
+      padding: 70px;
+      margin: 0px;
+    }
+
+    @media(min-width:500px){
+    #menu ol {
+        margin: 0px;
+        padding: 20px;
+        font-size: 16px;
+        line-height: 200%;
+        list-style: none;
+        color: blue;
+        /*border-right: 1px solid #aaa;*/
+    }
+
+      #box  {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+      }
+
+      #menu {
+        background-color: #eee;
+        border-right: 1px solid #aaa;
+        text-decoration: none;
+        padding: 30px;
+        margin: 0px;
+      }
+
+      #web{
+        padding: 30px;
+        color: #888;
+      }
+
+      #html{
+        color: #888;
+      }
+      }
+    </style>
+
+  </head>
+
+  <body>
+      <h1><a href="index.html">Web Home</a></h1>
+
+    <div id="box">
+      <div id="menu">
+        <ol>
+          <li><a href="html-cap.html">HTML</a></li>
+          <li><a href="css-cap.html">CSS</a></li>
+          <li><a href="js-cap.html">Javascript</a></li>
+          <li><a href="php-cap.html">PHP</a></li>
+          <li><a href="python-cap.html">Python</a></li>
+        </ol><p></p>
+      </div>
+
+      <div id="web">
+        <h3>WEB</h3><p></p>
+        <a id="html"href="https://www.w3.org/TR/2011/WD-html5-20110405/" target="_blank" title="W3C html5 reference Draft"><strong>Hypertext Markup Language <u>(HTML)</u></strong></a>
+        is the standard markup language for documents designed to be displayed in a web browser.
+        It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.
+        Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages.
+        HTML describes the structure of a web page semantically and originally included cues for the appearance of the document.
+        <br><br>
+        HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects such as interactive forms may be
+        embedded into the rendered page. HTML provides a means to create structured documents by denoting structural semantics for text
+        such as headings, paragraphs, lists, links, quotes and other items. HTML elements are delineated by tags, written using angle brackets. <p></p>
+        <p><img src="image/coding-image.jpg" width="100%"></p>
+        Tags such as <img> and <input> directly introduce content into the page. Other tags such as surround and provide information about
+        document text and may include other tags as sub-elements. Browsers do not display the HTML tags, but use them to interpret the content of the page.
+        HTML can embed programs written in a scripting language such as JavaScript, which affects the behavior and content of web pages.
+        Inclusion of CSS defines the look and layout of content. The World Wide Web Consortium (W3C), former maintainer of the HTML and current maintainer
+        of the CSS standards, has encouraged the use of CSS over explicit presentational HTML since 1997.[2]
+      </div>
+
+    </div>
+
+
+
+
+  </body>
+</html>

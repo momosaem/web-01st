@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>css-grid-basic</title>
+    <!--
+      Layout과 관련된 tag
+      1. <p> tag
+      2. <div> tag
+      3. <span> tag
+    -->
+
+    <!--
+      <p> tag :
+      Paragraph(단락, 절)의 약자
+      주로 문장에서 사용되는 태그
+      block level element (화면의 가로 전체를 영역으로 차지 세로는 콘텐트 크기만큼 차지)
+      block level element이므로 자동으로 줄바꿈이 된다.
+      자체적으로 margin값을 가지고 있어서 상하여백이 존재하여 margin값을 주지 않아도 tag사이에 여백이 존재
+      <p> tag는 고정적인 공간 사이즈를 가지고 있지 않으므로 웹브라우저를 줄이면 가로영역사이즈가 줄어 듬
+      콘텐트 크기에 따라 자동으로 영역이 넓어 짐
+    -->
+
+  <!--
+      <div> tag :
+      division(분할, 분, 나누기)의 약자
+      무색무취의 tag로 디자인 용도로만 쓰는 아무런 의미가 없는 태그
+      <div> tag는 기본적으로 block level element
+      block level element이므로 자동으로 줄바꿈이 된다.
+      자체적으로 margin값을 가지고 있지 않아서 상하여백이 존재하지 않으므로 margin값을 주지 않으면 tag사이에 여백이 없이 나옴
+      <div> tag도 <p> tag와 같이 고정적인 공간 사이즈를 가지고 있지 않으므로 웹브라우저를 줄이면 가로영역사이즈가 줄어 듬
+      콘텐트 크기에 따라 자동으로 영역이 넓어 짐
+  -->
+
+  <!--
+      <span> tag :
+      span(기간, 폭, 범위 너비)의 의미
+      Inline Text Container (자신에게 주어진 공간만을 차지하는 태그, 가로 세로 모두 콘텐트 크기만큼 차지)
+      Inline Text Container이므로 자동으로 줄바꿈이 되지 않는다.
+      상하좌우 여백도 존재하지 않음
+      <div> tag도 <p> tag와 다르게 고정적인 공간 사이즈를 가지고 있지 않음 즉 웹브라저를 줄여도 그 크기가 변동이 없다는 의미
+      콘텐트 크기에 따라 자동으로 영역이 넓어 짐
+  -->
+      <style>
+        p {
+          border: 2px solid #aaa;
+        }
+        div {
+          border: 2px solid #aaa;
+        }
+
+        span {
+          border: 2px solid #aaa;
+        }
+      </style>
+  </head>
+  <body>
+
+    <p>
+      Navigation
+    </p>
+    <p>
+      <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets" target="_blank" title="CSS define"><strong>Cascading Style Sheets <u>(CSS)</u></strong></a>
+      is a style sheet language used for describing the presentation of a document written in a markup language like HTML.
+      CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.[2]
+      CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts.[3]
+      This separation can improve content accessibility, provide more flexibility and control in the specification of
+      presentation characteristics, enable multiple web pages to share formatting by specifying the relevant CSS in a separate
+      .css file, and reduce complexity and repetition in the structural content.
+    </p>
+
+    <div>
+      Navigation
+    </div>
+    <div>
+      <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets" target="_blank" title="CSS define"><strong>Cascading Style Sheets <u>(CSS)</u></strong></a>
+      is a style sheet language used for describing the presentation of a document written in a markup language like HTML.
+      CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.[2]
+      CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts.[3]
+      This separation can improve content accessibility, provide more flexibility and control in the specification of
+      presentation characteristics, enable multiple web pages to share formatting by specifying the relevant CSS in a separate
+      .css file, and reduce complexity and repetition in the structural content.
+    </div>
+
+    <span>
+      Navigation
+    </span>
+    <span>
+      <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets" target="_blank" title="CSS define"><strong>Cascading Style Sheets <u>(CSS)</u></strong></a>
+      is a style sheet language used for describing the presentation of a document written in a markup language like HTML.
+      CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.[2]
+      CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts.[3]
+      This separation can improve content accessibility, provide more flexibility and control in the specification of
+      presentation characteristics, enable multiple web pages to share formatting by specifying the relevant CSS in a separate
+      .css file, and reduce complexity and repetition in the structural content.
+    </span>
+  </body>
+</html>

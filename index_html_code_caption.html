@@ -1,0 +1,176 @@
+<!DOCTYPE html> <!-- 이페지는 html이다는 것을 정의-->
+<!--
+참조사이트 : https://www.w3schools.com/
+추천검색어
+html new line tag: <br/> -> 단순 줄바꿈
+html paragraph(단락) tag: <p></p>
+사용설명서 검색:html specification
+<p style="margin-top:45px;"><h1>HTML</h1> <p/></style>
+-->
+<!-- 검색시 element를 사용 element : tag의 의미 -->
+
+<!--
+<img src="image/coding-image.jpg" width="100%">
+[src]와 [width]를 속성, Attribute
+-->
+
+<!--
+<ol></ol> Ordered List
+          The <ol> tag defines an ordered list. An ordered list can be numerical or alphabetical.
+          Use the <li> tag to define list items.
+<ul></ul> Unordered List
+          The <ul> tag defines an unordered (bulleted) list.
+          Use the <ul> tag together with the <li> tag to create unordered lists.
+<li></li> List item
+-->
+
+<!--
+원하는 위치에 동시에 같은 글이나 태그를 입력하고 싶을때!!!!!!!!
+
+Ctrl을 누른채로 원하는 위치에서 클릭하면 다중선택이 된다.
+선택된 상태에서 입력하면 동시다발적으로 입력이 됨
+-->
+<html>
+  <head>
+    <meta charset="utf-8"> <!-- 페이지를 열때 utf-8로 열어라-->
+    <title>index html code caption</title>
+    <style>
+      a {
+        color:#000000;
+        text-decoration: none; /* 밑줄삭제(a태그의 기본은 밑줄이 있음) */
+
+        /* a: selector(선택자)
+           color:#000000; : declaration(선언, 효과, 데클러레이션)
+           color : property(속성)
+           #000000 : value(값)
+         */
+      }
+
+
+    #active{
+      color:#aa33ff;
+      /* #active에서 #은 id라는 것을 의미
+          id 값으로 선언한 active는 유일무이한 값으로 단 한번만 쓸 수 있고 중복으로 쓸 수 없다.
+          id 네임은 중복해서 쓰지 못한다.
+          id 카드는 한사람에게 하나만 발급할 수 있다는 개념
+          그러나 class 네임은 중복해서 사용이 가능하다.
+          아래에 saw는 HTML과 CSS에 동시에 선언이 되어 있다.
+        class 선택자(Selector)보다 id 선택자가 코드와 더 멀어져 있음에도 불구하고 id선택자가 우선이 된다.
+        id > class > tag
+        포괄적인 것 보다는 구체적 것에 우선 순위를 줌 즉 tag선택자가 id선택자는
+       */
+    }
+
+    .saw{                    /* .saw는 클래스선택자로 .은 class를 나타냄 즉 saw라는 class에 대해서 모두 적용 */
+        color:#aaa;
+        /* class 네임은 중복해서 사용이 가능
+           아래에 saw는 HTML과 CSS에 동시에 선언이 되어 있다.
+         */
+      }
+
+    .active{
+        color:#aa33ff;
+        /* 아래 html코드에서 CSS링크는 2개의 클래스에 영향을 받는다. .saw와 .active
+           그런데 여기서는 .active의 영향을 받고 있다.
+           그것은 순서때문인데 .active가 CSS html코드에 더 가까이 있기때문이다.
+           즉 더 가까이 있는 것이 우선적으로 영향을 받는다. */
+    }
+
+
+      h1 {
+        color:#a0a0a0;
+        font-size: 24px;
+        text-decoration: none;
+        text-align: center;
+      }
+
+
+    </style>
+  </head>
+
+  <body>
+    <h1><a href="index.html">WEB</a></h1>
+    <ul>
+      <li><a href="html-cap.html" class="saw" >HTML</a></li>
+      <li><a href="css-cap.html" class="saw active">CSS</a></li>
+      <li><a href="css-cap.html" class="saw" id="active">CSS3</a></li>
+      <li><a href="js-cap.html">Javascript</a></li>
+    </ul><p></p>
+
+    <!-- <h1><a href="index.html">WEB</a></h1>
+    <ul>
+      <li><a href="html-cap.html">HTML</a></li>
+      <li><a href="css-cap.html" style="color:#FF6EED; text-decoration:underline">CSS</a></li>
+      <li><a href="js-cap.html">Javascript</a></li>
+    </ul><p></p> -->
+
+    <!-- <h1><a href="index.html">WEB HOME</a></h1>
+    <ul>
+      <li><a href="html-cap.html ">HTML</a></li>
+      <li><a href="css-cap.html">CSS</a></li>
+      <li><a href="js-cap.html">Javascript</a></li>
+    </ul><p></p> -->
+    <!--
+        <a href="https://www.w3.org/TR/2011/WD-html5-20110405/" target="_top" title="W3C html5 reference Draft"></a>
+        href: h: Hypertext ref: Reference
+        _blank :  새 윈도우 창을 열어서, 웹페이지를 엽니다. 기존의 창은 그대로 남겨져 있스빈다.
+        _self :   현재 윈도우창에 그대로, 링크된 웹페이지를 엽니다. ( 현재의 프레임 )
+        _parent : 현재 프레임의 부모 프레임에서 새웹페이지가 열립니다.
+                  만약 어떤 창 A에서 창 B를 새로 열었습니다. 그런데 창 B에서 _parent로 창을 열면 창 A에서 열리게 되는 것이죠.
+        _top : 최상위 프레임에서 열립니다. _parent와 비슷한데요. _parent는 바로 이전창(부모창)에서 열리는 반면
+               _top은 최상위(가장 최고 부모)창에서 열립니다.
+        title : 링크에 마우스 올렸을때 나타나는 참조 글
+    -->
+    <p>
+      <!--
+          <iframe> tag
+          추천검색어: iframe Attribute
+
+          inline Frame의 약자
+          현재 HTML 문서에 다른 문서(다른 html페이지, 동영상 등)를 포함시킬 때 사용
+          HTML5 이전에도 이후에도 iframe을 사용하지 않는 것을 권고
+          -반응형 웹 사이트가 대세인 오늘날의 트렌드와 상극
+          -페이지의 파편화 문제 발생
+           (검색 엔진 등록 시 frameset 뿐만 아니라 메뉴용 페이지, 콘텐츠용 페이지 까지 함께 크롤링 할 수 있다.)
+          -웹접근성 저해의 요인이 될 수 있음으로 남용에 주의
+          -프레임 구조가 가지고 있던 장점을 CSS와 jQuery로 해결 가능
+          *속성
+          width:
+          height:
+          src:
+          srcdoc:
+          frameborder:
+          allow:Specifies a feature policy for the <iframe>. See the article Privacy, permissions,
+                 and information security for details on security issues and how <iframe> works
+                 with Feature Policy to keep systems safe.
+                 -accelerometer:
+                 -autoplay:
+                 -encrypted-media:
+                 -gyroscope:
+                 -picture-in-picture
+          allowfullscreen: Set to true if the <iframe> can activate fullscreen mode by calling the requestFullscreen() method.
+          allowpaymentrequest: Set to true if a cross-origin <iframe> should be allowed to invoke the Payment Request API.
+
+      -->
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/7T7r_oSp0SE" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </p>
+    <p style="margin-top:45;"><h3>WEB</h3>
+    <a href="https://www.w3.org/TR/2011/WD-html5-20110405/" target="_blank" title="W3C html5 reference Draft"><strong>Hypertext Markup Language <u>(HTML)</u></strong></a>
+    is the standard markup language for documents designed to be displayed in a web browser.
+    It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.
+    Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages.
+    HTML describes the structure of a web page semantically and originally included cues for the appearance of the document.
+    <br><br>
+    HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects such as interactive forms may be
+    embedded into the rendered page. HTML provides a means to create structured documents by denoting structural semantics for text
+    such as headings, paragraphs, lists, links, quotes and other items. HTML elements are delineated by tags, written using angle brackets. <p></p>
+    <p><img src="image/coding-image.jpg" width="100%"></p> <!-- 100%: 브라우저 크기에 맞게 자동으로 확대 축소-->
+    Tags such as <img> and <input> directly introduce content into the page. Other tags such as surround and provide information about
+    document text and may include other tags as sub-elements. Browsers do not display the HTML tags, but use them to interpret the content of the page.
+    HTML can embed programs written in a scripting language such as JavaScript, which affects the behavior and content of web pages.
+    Inclusion of CSS defines the look and layout of content. The World Wide Web Consortium (W3C), former maintainer of the HTML and current maintainer
+    of the CSS standards, has encouraged the use of CSS over explicit presentational HTML since 1997.[2]
+
+  </body>
+</html>
