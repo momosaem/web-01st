@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>js-loop-and-array-use</title>
+  <style>
+    h1 {
+      color: #2d4eb0;
+      text-align: center;
+      font-family: calibri;
+      font-weight: bold;
+    }
+
+    input {
+      width: 150px;
+      height: 30px;
+      font-size: 20px;
+      font-family: calibri;
+      border: 1px solid #aaa;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    #grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      text-align: center;
+      background-color: #aaa;
+      height:30px;
+      font-size: 23px;
+      border: 1px solid #888;
+      font-family: calibri;
+    }
+    .htmlclass{
+      border-right: 1px solid #888;
+    }
+    .cssclass{
+      border-right: 1px solid #888;
+    }
+  </style>
+</head>
+    <!-- js-loop-and-array-use
+    우선 이 코드에 웹브라우저를 열어 콘솔창에
+    document.querySelector('a')
+    하고 엔터를 치면 출력으로
+    <a href="https://www.w3schools.com/html/default.asp">HTML</a>이 출력된다.
+    즉 첫번째 <a> 태그만 출력된다. 이 페이지의 모든 <a> 태그를 불러오고 싶다면
+    document.querySelectorAll('a') 함수를 쓰면 다음과 같은 배열이 나온다.
+    NodeList(4) [a, a, a, a]
+    이것을 var alist = document.querySelectorAll('a'); 변수로 생성한 후
+    shift + enter Key를 누르면 실행되지 않고 줄바꿈이 된다.
+    줄바꿈한 곳에
+    console.log('alist'[0]);를 하면
+    <a href="https://www.w3schools.com/html/default.asp">HTML</a>
+    첫번째 <a> 태그가 나오고
+    var alist = document.querySelectorAll('a');
+    console.log(alist[1]); 를 하면
+    <a href="https://www.w3schools.com/css/default.asp">CSS</a>
+    var alist = document.querySelectorAll('a');
+    console.log(alist.length);를 하면
+    4가 출력된다.
+
+    var alist = document.querySelectorAll('a');
+    var i = 0;
+    while(i < alist.length){
+    console.log(alist[i]);
+    i = i + 1;
+    }
+
+    <a href="https://www.w3schools.com/html/default.asp">HTML</a>
+    <a href="https://www.w3schools.com/css/default.asp">CSS</a>
+    <a href="https://www.w3schools.com/js/default.asp">JAVASCRIPT</a>
+    <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank" title="javaScript define"><strong>JavaScript<u>(JS)</u></strong></a>
+    이렇게 모든 <a>태그가 다 출력이 된다.
+
+    키보드에 위쪽 화살표를 누르면 방금 전 위에코드가 다시 나타난다.
+    var alist = document.querySelectorAll('a');
+    var i = 0;
+    while(i < alist.length){
+     console.log(alist[i]);
+    alist[i].style.color = #eee;
+    i = i + 1;
+}-->
+
+  <body>
+    <h1> Javascript Loop and Array Use</h1>
+    <center><input type="button" value="NIGHT" onclick="
+        var target = document.querySelector('body')
+        if(this.value === 'NIGHT'){
+          target.style.backgroundColor = 'black';
+          target.style.color = 'white';
+          this.value = 'DAY';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+          alist[i].style.color = 'white';
+          i = i + 1;
+        }
+        } else{
+          target.style.backgroundColor = 'white';
+          target.style.color = 'black';
+          this.value = 'NIGHT';
+
+          var alist = document.querySelectorAll('a');
+          var i = 0;
+          while(i < alist.length){
+            alist[i].style.color = 'black';
+            i = i + 1;
+          }
+        }
+      "></center><P></P>
+    <div id="grid">
+        <div class="htmlclass">
+          <a href="https://www.w3schools.com/html/default.asp" style="color: black ">HTML</a>
+          </div>
+        <div class="cssclass">
+          <a href="https://www.w3schools.com/css/default.asp" style="color: black ">CSS</a>
+          </div>
+        <div class="jsclass">
+          <a href="https://www.w3schools.com/js/default.asp" style="color: black ">JAVASCRIPT</a>
+          </div>
+    </div><P></P>
+
+    <p style="margin-top:45;"><h3>JavaScript</h3></p>
+    <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank" title="javaScript define"><strong>JavaScript<u>(JS)</u></strong></a>
+    JavaScript (/ˈdʒɑːvəˌskrɪpt/),[6] often abbreviated as JS, is a programming language that conforms to the ECMAScript specification.
+    JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing,
+    prototype-based object-orientation, and first-class functions.
+    <br><br>
+    Alongside HTML and CSS, JavaScript is one of the core technologies of the World Wide Web.
+    JavaScript enables interactive web pages and is an essential part of web applications.
+    The vast majority of websites use it for client-side page behavior,[9] and all major web browsers have a dedicated JavaScript engine to execute it. <p></p>
+    <p><img src="image/coding-image.jpg" width="100%"></p> <!-- 100%: 브라우저 크기에 맞게 자동으로 확대 축소-->
+    As a multi-paradigm language, JavaScript supports event-driven, functional, and imperative programming styles.
+    It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures,
+    and the Document Object Model (DOM). However, the language itself does not include any input/output (I/O), such as networking, storage,
+    or graphics facilities, as the host environment (usually a web browser) provides those APIs.
+
+</body>
+
+</html>

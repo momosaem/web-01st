@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+    h2 {
+      font-size: 30px;
+      color: #bb55ee;
+      text-align: center;
+    }
+    input {
+      width: 150px;
+      height: 40px;
+      font-size: 20px;
+      font-family: "nanumgothiccoding";
+      font-weight: bold;
+      color: #777;
+    }
+    div a {
+      color: #345fde;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    #list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      border: 1px solid #aaa;
+      text-align: center;
+      height: 30px;
+    }
+
+    .htmlclass{
+      border-right: 1px solid #aaa;
+      background-color: #eee;
+    }
+    .cssclass{
+      border-right: 1px solid #aaa;
+      background-color: #eee;
+    }
+    .jsclass{
+      background-color: #eee;
+    }
+  </style>
+</head>
+
+<body>
+  <h2> JS-LOOP</h2>
+  <center>
+
+    <input type="button" value="NIGHT" onclick="
+    var target = document.querySelector('body')
+    if(this.value === 'NIGHT'){
+      target.style.backgroundColor = 'black';
+      target.style.color = 'white';
+      this.value = 'DAY';
+    } else {
+      target.style.backgroundColor ='white';
+      target.style.color = 'black';
+      this.value = 'NIGHT';
+    }
+
+  "></center>
+  <p></p>
+
+  <div id="list">
+    <div class="htmlclass">
+      <a href="html-cap.html" class="saw" >HTML</a>
+    </div>
+    <div class="cssclass">
+      <a href="css-cap.html" class="saw active">CSS</a>
+    </div>
+    <div class="jsclass">
+      <a href="js-cap.html">Javascript</a>
+    </div>
+  </div>
+
+    <p>
+      <h3>JavaScript</h3>
+    </p>
+    <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank" title="javaScript define"> <strong>JavaScript<u>(JS)</u></strong></a>
+    JavaScript (/ˈdʒɑːvəˌskrɪpt/),[6] often abbreviated as JS, is a programming language that conforms to the ECMAScript specification.
+    JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing,
+    prototype-based object-orientation, and first-class functions.
+    <br><br>
+    Alongside HTML and CSS, JavaScript is one of the core technologies of the World Wide Web.
+    JavaScript enables interactive web pages and is an essential part of web applications.
+    The vast majority of websites use it for client-side page behavior,[9] and all major web browsers have a dedicated JavaScript engine to execute it. <p></p>
+    <p><img src="image/coding-image.jpg" width="100%"></p> <!-- 100%: 브라우저 크기에 맞게 자동으로 확대 축소-->
+    As a multi-paradigm language, JavaScript supports event-driven, functional, and imperative programming styles.
+    It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures,
+    and the Document Object Model (DOM). However, the language itself does not include any input/output (I/O), such as networking, storage,
+    or graphics facilities, as the host environment (usually a web browser) provides those APIs.
+  <p></p>
+</body>
+
+</html>

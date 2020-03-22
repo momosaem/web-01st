@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>css-button-center</title>
+  </head>
+    <style>
+    /* 브라우저 기본값 초기화 */
+    body {
+      padding: 0px;
+      margin: 0px;
+    }
+    h1{
+      text-align: center;
+      font-family: calibri;
+      color: #288CFF;
+    }
+    /*
+    flex 속성
+    display: flex는 익스 10이상에서 지원
+    flex:  블록 타입 레이아웃 모드
+    IE는 display: flexbox를 지정하고 다른 브라우저는 display: flex를 지정
+    먼저 진행 축(main axis)과 교차 축(cross axis)을 이해할 필요가 있습니다.
+    ‘진행 축’이란 flex item이 배치되는 축(x/y)을 의미합니다.
+    ‘교차 축’이란 flex item이 배치되는 방향과 90도 교차하는 축을 의미합니다.
+    진행 축과 교차 축은 상대적인 개념이라서 flex-direction의 값( row, column)에 따라 교차 축이 바뀌기 때문에 헷갈리기 쉽습니다.
+    flex-direction:row인 경우 교차 축은 y가 되지만 flex-direction:column인 경우 교차 축은 x가 되겠지요.
+
+    한 줄(single line)과 여러 줄(multi line)의 개념도 이해해야 합니다.
+    단일 행 또는 여러 행이라고 표현하지 않는 이유는 flex-direction 값( row, column)에 따라 여러 줄이 행이 될 수도 있지만 열이 될 수도 있기 때문입니다. 여러 줄은 flex-basis 값과 flex-wrap:wrap 속성에 의해 한 줄로 표현하기에 빈 공간(free space)이 모자라는 경우에만 발생합니다.
+
+    justify-content 속성만 진행 축 정렬에 관여하고 align-items, align-self, align-content 속성은 모두 교차 축 정렬에 관여
+    */
+
+    div.flex-container{
+      display: flex;
+      /* CSS3에 추가된 속성으로 flexible item이 flex 컨테이너 안에 위치되는 방법을 지정 */
+      flex-direction: row;   
+      /* justify-content: ‘진행 축’ 정렬과 아이템 사이의 간격을 제어 justify-content: center: 중심축의 중앙에 정렬 */
+      justify-content: center;
+      /* 진행 축과 교차하는 ‘교차 축’ 정렬을 제어 */
+      align-items: center;
+
+     }
+     div.buttons input{
+       border:1px solid #777;
+       width: 100px;
+       height: 30px;
+       font-family: calibri;
+       font-size: 18px;
+       font-weight: bold;
+       color: #888;
+       border-radius: 4px;
+     }
+
+    </style>
+  <body>
+    <h1>JavaScript Event</h1>
+    <div class="flex-container">
+      <div class="buttons">
+        <input type="button" value="NIGHT"/>
+        <input type="button" value="DAY"/>
+      </div>
+
+    </div>
+
+  </body>
+</html>

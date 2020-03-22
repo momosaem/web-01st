@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>js-event</title>
+  <style>
+    h1 {
+      text-align: center;
+      font-family: calibri;
+      color: #288CFF;
+    }
+
+    /* flex 속성 설명은 css-button-center.html에 있음  */
+    div.center {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    div.buttons input {
+      border: 1px solid #777;
+      width: 100px;
+      height: 30px;
+      font-family: calibri;
+      font-size: 18px;
+      font-weight: bold;
+      color: #888;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+
+
+<body>
+  <h1>JavaScript Event</h1>
+
+  <div class="center">
+    <div class="buttons">
+
+      <input type="button" value="NIGHT" onclick="
+          document.querySelector('body').style.backgroundColor = 'black';
+          document.querySelector('body').style.color = 'white';
+      ">
+      <input type="button" value="DAY" onclick="
+          document.querySelector('body').style.backgroundColor = 'white';
+          document.querySelector('body').style.color = 'black';
+      ">
+      <!-- 버튼 하나로 이벤트 실행 input value값도 함께 변경 -->
+      <!--
+      if(document.querySelector('#night_day').value==='C-NIGHT' ){ document.querySelector('body').style.backgroundColor='black' ;
+        document.querySelector('body').style.color='white' ; document.querySelector('#night_day').value='C-DAY' ; } else { document.querySelector('body').style.backgroundColor='white' ; document.querySelector('body').style.color='black' ;
+        document.querySelector('#night_day').value='C-NIGHT' ; } ">
+      -->
+      <!--
+      Code Refactoring
+
+      1.this 키워드
+      <input id="night_day" type="button" value="C-NIGHT" onclick="
+      document.querySelector('#night_day')는 id가 " night_day"인
+      <input> tag 자신을 가리키므로 자기자신을 this로 표현한다.
+      이렇게 되면 <input> tag 안에 id는 더이상 참조하지 않으므로 삭제 한다.
+
+      2. variable(변수)을 이용한 코드 중복제거
+      document.querySelector('body')가 중복되므로 이부분을 변수처리해서 사용
+      var target = document.querySelector('body')
+      var : 변수선언할때 앞에 써주는것을 권장, target: 변수명,
+      document.querySelector('body') ;변수값
+      -->
+
+      <input type="button" value="C-NIGHT" onclick="
+          var target = document.querySelector('body')
+          if(this.value === 'C-NIGHT'){
+            target.style.backgroundColor = 'black';
+            target.style.color = 'white';
+            this.value = 'C-DAY';
+
+          } else {
+            target.style.backgroundColor = 'white';
+            target.style.color = 'black';
+            this.value = 'C-NIGHT';
+          }
+      ">
+
+    </div>
+
+  </div>
+  <p style="margin-top:45;"> </p>
+
+  <h3>JavaScript</h3>
+
+  <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank" title="javaScript define"><strong>JavaScript<u>(JS)</u></strong></a>
+  JavaScript (/ˈdʒɑːvəˌskrɪpt/),[6] often abbreviated as JS, is a programming language that conforms to the ECMAScript specification.
+  JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing,
+  prototype-based object-orientation, and first-class functions.
+  <br><br>
+  Alongside HTML and CSS, JavaScript is one of the core technologies of the World Wide Web.
+  JavaScript enables interactive web pages and is an essential part of web applications.
+  The vast majority of websites use it for client-side page behavior,[9] and all major web browsers have a dedicated JavaScript engine to execute it. <p></p>
+  As a multi-paradigm language, JavaScript supports event-driven, functional, and imperative programming styles.
+  It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures,
+  and the Document Object Model (DOM). However, the language itself does not include any input/output (I/O), such as networking, storage,
+  or graphics facilities, as the host environment (usually a web browser) provides those APIs.
+  <p><img src="image/coding-image.jpg" width="100%"></p> <!-- 100%: 브라우저 크기에 맞게 자동으로 확대 축소-->
+</body>
+
+</html>

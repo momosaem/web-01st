@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <h1> Loop and Array</h1>
+  <script>
+    var members = ['html', 'CSS', 'PHP', 'Javascript'];
+  </script>
+
+  <h2> for문 </h2>
+  <ul>
+    <script>
+      var i;
+      for(i=0; i<members.length; i++){
+      document.write("<li>"+ members[i] + "</li>");
+      }
+    </script><p></p>
+  </ul>
+
+  <h2> while문 </h2>
+  <ul>
+    <script>
+      var i = 0;
+      while(i<members.length){
+        document.write("<li>" + members[i] + "</li>");
+        i = i + 1;
+      }
+    </script>
+  </ul>
+
+  <h2> List link </h2>
+  <ul>
+    <script>
+      var i;
+      for(i=0; i<members.length; i++){
+        document.write('<li><a href="https://www.w3schools.com">' +members[i]+ '</a></li>');
+        // document.write('<li><a href="https://www.w3schools.com'+members[i]+'">' +members[i]+ '</a></li>'); -> Error
+      }
+
+    </script>
+  </ul>
+
+</body>
+
+</html>

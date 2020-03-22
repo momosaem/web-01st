@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>js-event</title>
+  <style>
+    /* 브라우저 기본값 초기화
+      body {
+        padding: 0px;
+        margin: 0px;
+      }
+      */
+
+    /*
+      css의 Selector(선택자)
+      1. tag
+      2. class
+      3. id
+      id > class > tag
+    */
+    h1 {
+      text-align: center;
+      font-family: calibri;
+      color: #288CFF;
+    }
+
+    /* flex 속성 설명은 css-button-center.html에 있음  */
+    div.center {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    div.buttons input {
+      border: 1px solid #777;
+      width: 100px;
+      height: 30px;
+      font-family: calibri;
+      font-size: 18px;
+      font-weight: bold;
+      color: #888;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<style>
+  /* 브라우저 기본값 초기화
+    body {
+      padding: 0px;
+      margin: 0px;
+    }
+    */
+
+  /*
+    css의 Selector(선택자)
+    1. tag
+    2. class
+    3. id
+    id > class > tag
+  */
+  h1 {
+    text-align: center;
+    font-family: calibri;
+    color: #288CFF;
+  }
+
+  /* flex 속성 설명은 css-button-center.html에 있음  */
+  div.center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  div.buttons input {
+    border: 1px solid #777;
+    width: 100px;
+    height: 30px;
+    font-family: calibri;
+    font-size: 18px;
+    font-weight: bold;
+    color: #888;
+    border-radius: 4px;
+  }
+</style>
+
+<body>
+  <h1>JavaScript Event</h1>
+
+  <div class="center">
+    <div class="buttons">
+      <!--
+        onclick: 버튼을 클릭하면 ""안의 내용을 실행하겠다. document: 이 문서에서 querry:웹브라우에게 질의 하다 Selector: css 선택자 body: 선택자로 body tag의 style: 스타일을 backgroundColor='black': 백그라운드 블랙으로 하겠다.
+        만약 id값을 선택자로 하고싶으면 <body> tag에 id(ex. id="butt")를 지정하고 document.querySelector('#butt')
+        -->
+      <input type="button" value="NIGHT" onclick="
+          document.querySelector('body').style.backgroundColor = 'black';
+          document.querySelector('body').style.color = 'white';
+      ">
+      <input type="button" value="DAY" onclick="
+          document.querySelector('body').style.backgroundColor = 'white';
+          document.querySelector('body').style.color = 'black';
+      ">
+      <!-- 버튼 하나로 이벤트 실행 input value값도 함께 변경 -->
+      <input id="night_day" type="button" value="C-NIGHT" onclick="
+          if(document.querySelector('#night_day').value === 'C-NIGHT'){
+            document.querySelector('body').style.backgroundColor = 'black';
+            document.querySelector('body').style.color = 'white';
+            document.querySelector('#night_day').value = 'C-DAY';
+
+          } else {
+            document.querySelector('body').style.backgroundColor = 'white';
+            document.querySelector('body').style.color = 'black';
+            document.querySelector('#night_day').value = 'C-NIGHT';
+          }
+      ">
+    </div>
+
+  </div>
+  <p style="margin-top:45;">
+    <h3>JavaScript</h3>
+  </p>
+  <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank" title="javaScript define"><strong>JavaScript<u>(JS)</u></strong></a>
+  JavaScript (/ˈdʒɑːvəˌskrɪpt/),[6] often abbreviated as JS, is a programming language that conforms to the ECMAScript specification.
+  JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing,
+  prototype-based object-orientation, and first-class functions.
+  <br><br>
+  Alongside HTML and CSS, JavaScript is one of the core technologies of the World Wide Web.
+  JavaScript enables interactive web pages and is an essential part of web applications.
+  The vast majority of websites use it for client-side page behavior,[9] and all major web browsers have a dedicated JavaScript engine to execute it. <p></p>
+  As a multi-paradigm language, JavaScript supports event-driven, functional, and imperative programming styles.
+  It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures,
+  and the Document Object Model (DOM). However, the language itself does not include any input/output (I/O), such as networking, storage,
+  or graphics facilities, as the host environment (usually a web browser) provides those APIs.
+  <p><img src="image/coding-image.jpg" width="100%"></p> <!-- 100%: 브라우저 크기에 맞게 자동으로 확대 축소-->
+</body>
+
+</html>
